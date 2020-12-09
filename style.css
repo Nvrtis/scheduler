@@ -34,6 +34,8 @@ textarea{
   white-space: pre-wrap;
   height: 80px;
   border-top: 1px solid white;;
+  height: 50px;
+  padding-bottom: 10px;
 }
 
 .hour {
@@ -69,3 +71,18 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.time-block {
+  display: block;
+  text-align: center;
+  border: 1px solid;
+  border-radius: 3px;
+  padding-top: 9px;
+  background-color: lightgreen;
+  font-weight: bolder;
+}
+
+#currentDay {
+  margin-bottom: 0;
+}
+
