@@ -2,6 +2,13 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
+  background-image: url("https://imgcy.trivago.com/c_limit,d_dummy.jpeg,f_auto,h_1300,q_auto,w_2000/itemimages/16/07/160773_v8.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+
 }
 
 textarea{
@@ -15,7 +22,7 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
+  background-color: lightblue;
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
@@ -57,12 +64,11 @@ textarea{
 
 .present {
   background-color: blue;
-  color: white;
+  font-weight: bolder;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {
