@@ -90,6 +90,13 @@ function displayText() {
 
 // changing color depending on what hour of the day
 
+
+function updateColorChange() {
+    var update2 = 6000
+    setTimeout(ColorChange, update2)
+}
+
+function ColorChange() {
 for(var i = 0; i < rowValue.length; i++) {
 if (todaysHour == $(rowValue[i]).text()) {
     $(row[i]).removeClass('past present future')
@@ -104,3 +111,6 @@ else {
     $(row[i]).addClass('future')
 }
 }
+updateColorChange()
+}
+ColorChange()
