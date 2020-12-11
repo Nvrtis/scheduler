@@ -16,12 +16,12 @@ const todaysDateDisplay = $('#currentDay')
 const rowValue= $('.time')
 
 var todaysDate = new Date();
-var todaysHour = 15
+var todaysHour = todaysDate.getHours()
 
 // Function for showing the time in the header
 function showTime() {
     todaysDate = new Date();
-    // todaysHour = todaysDate.getHours()
+    todaysHour = todaysDate.getHours()
     todaysDateDisplay.html(todaysDate)
     updateTime()
 }
