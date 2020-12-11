@@ -47,4 +47,7 @@ The rest if the code is if statments that will change the classes on each differ
 
 The statments goes through a loop to figure out with of the rows needs which class, and $(rowValue[i]).text() shows what value the time is on that row
 
+It is also updating every minute to see if it needs to be changed with 2 functions. The first functions is one for updating the other function which checks the if statments 
+
 ![If statments](Assets/if.png)
+
