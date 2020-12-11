@@ -1,35 +1,29 @@
 // Const and variable list
 const nineInput = $('#user-input9')
-const rowValueNine = $('#time1').text()
 const tenInput = $('#user-input10')
-const rowValueTen = $('#time2').text()
 const elevenInput = $('#user-input11')
-const rowValueEleven = $('#time3').text()
 const twelveInput = $('#user-input12')
-const rowValueTwelve = $('#time4').text()
 const thirteenInput = $('#user-input13')
-const rowValueThirteen = $('#time5').text()
 const fourteenInput = $('#user-input14')
-const rowValueFourteen = $('#time6').text()
 const fifteenInput = $('#user-input15')
-const rowValueFifteen = $('#time7').text()
 const sixsteenInput = $('#user-input16')
-const rowValueSixsteen = $('#time8').text()
 const seventeenInput = $('#user-input17')
-const rowValueSeventeen = $('#time9').text()
 const input = $('.input')
 const timeBlock = $('.time-block')
 const row = $('.row')
 const saveBtn = $('.btn')
 const todaysDateDisplay = $('#currentDay')
+const rowValue= $('.time')
+
+console.log(rowValue);
 
 var todaysDate = new Date();
-var todaysHour = todaysDate.getHours()
+var todaysHour = 15
 
 // Function for showing the time in the header
 function showTime() {
     todaysDate = new Date();
-    todaysHour = todaysDate.getHours()
+    // todaysHour = todaysDate.getHours()
     todaysDateDisplay.html(todaysDate)
     updateTime()
 }
@@ -95,118 +89,20 @@ function displayText() {
     sixsteenInput.val(sixsteen)
     seventeenInput.val(seventeen)
 }
-console.log($(row[0]));
+
 // changing color depending on what hour of the day
-if (todaysHour == rowValueNine) {
-    $('#row1').removeClass('past present future')
-    $('#row1').addClass('present')
-}
-else if (todaysHour > rowValueNine) {
-    $('#row1').removeClass('past present future')
-    $('#row1').addClass('past')
-}
-else {
-    $('#row1').removeClass('past present future')
-    $('#row1').addClass('future')
-}
 
-if (todaysHour == rowValueTen) {
-    $('#row2').removeClass('past present future')
-    $('#row2').addClass('present')
+for(var i = 0; i < rowValue.length; i++) {
+if (todaysHour == $(rowValue[i]).text()) {
+    $(row[i]).removeClass('past present future')
+    $(row[i]).addClass('present')
 }
-else if (todaysHour > rowValueTen) {
-    $('#row2').removeClass('past present future')
-    $('#row2').addClass('past')
-}
-else {
-    $('#row2').removeClass('past present future')
-    $('#row2').addClass('future')
-}
-
-if (todaysHour == rowValueEleven) {
-    $('#row3').removeClass('past present future')
-    $('#row3').addClass('present')
-}
-else if (todaysHour > rowValueEleven) {
-    $('#row3').removeClass('past present future')
-    $('#row3').addClass('past')
+else if (todaysHour > $(rowValue[i]).text()) {
+    $(row[i]).removeClass('past present future')
+    $(row[i]).addClass('past')
 }
 else {
-    $('#row3').removeClass('past present future')
-    $('#row3').addClass('future')
+    $(row[i]).removeClass('past present future')
+    $(row[i]).addClass('future')
 }
-if (todaysHour == rowValueTwelve) {
-    $('#row4').removeClass('past present future')
-    $('#row4').addClass('present')
-}
-else if (todaysHour > rowValueTwelve) {
-    $('#row4').removeClass('past present future')
-    $('#row4').addClass('past')
-}
-else {
-    $('#row4').removeClass('past present future')
-    $('#row4').addClass('future')
-}
-
-if (todaysHour == rowValueThirteen) {
-    $('#row5').removeClass('past present future')
-    $('#row5').addClass('present')
-}
-else if (todaysHour > rowValueThirteen) {
-    $('#row5').removeClass('past present future')
-    $('#row5').addClass('past')
-}
-else {
-    $('#row5').removeClass('past present future')
-    $('#row5').addClass('future')
-}
-if (todaysHour == rowValueFourteen) {
-    $('#row6').removeClass('past present future')
-    $('#row6').addClass('present')
-}
-else if (todaysHour > rowValueFourteen) {
-    $('#row6').removeClass('past present future')
-    $('#row6').addClass('past')
-}
-else {
-    $('#row6').removeClass('past present future')
-    $('#row6').addClass('future')
-}
-
-if (todaysHour == rowValueFifteen) {
-    $('#row7').removeClass('past present future')
-    $('#row7').addClass('present')
-}
-else if (todaysHour > rowValueFifteen) {
-    $('#row7').removeClass('past present future')
-    $('#row7').addClass('past')
-}
-else {
-    $('#row7').removeClass('past present future')
-    $('#row7').addClass('future')
-}
-
-if (todaysHour == rowValueSixsteen) {
-    $('#row8').removeClass('past present future')
-    $('#row8').addClass('present')
-}
-else if (todaysHour > rowValueSixsteen) {
-    $('#row8').removeClass('past present future')
-    $('#row8').addClass('past')
-}
-else {
-    $('#row8').removeClass('past present future')
-    $('#row8').addClass('future')
-}
-if (todaysHour == rowValueSeventeen) {
-    $('#row9').removeClass('past present future')
-    $('#row9').addClass('present')
-}
-else if (todaysHour > rowValueSeventeen) {
-    $('#row9').removeClass('past present future')
-    $('#row9').addClass('past')
-}
-else {
-    $('#row9').removeClass('past present future')
-    $('#row9').addClass('future')
 }

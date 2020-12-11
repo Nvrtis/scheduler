@@ -43,6 +43,8 @@ This function will recieve the item from local storage, save it as a variable an
 
 ![Display function](Assets/display.png)
 
-The rest if the code is if statments that will change the classes on each different row. These classes changes the background color of the row and other styling, such that the users have an easy view over what is the past, present and future.
+The rest if the code is if statments that will change the classes on each different row. These classes changes the background color of the row and other styling, such that the users have an easy view over what is the past, present and future. 
+
+The statments goes through a loop to figure out with of the rows needs which class, and $(rowValue[i]).text() shows what value the time is on that row
 
 ![If statments](Assets/if.png)
