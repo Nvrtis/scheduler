@@ -15,8 +15,6 @@ const saveBtn = $('.btn')
 const todaysDateDisplay = $('#currentDay')
 const rowValue= $('.time')
 
-console.log(rowValue);
-
 var todaysDate = new Date();
 var todaysHour = 15
 
